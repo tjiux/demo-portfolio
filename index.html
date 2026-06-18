@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 创造者 · 作品集</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles"></canvas>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">&lt;AI Dev /&gt;</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#projects" class="nav-link">项目</a></li>
+                <li><a href="#skills" class="nav-link">技能</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="菜单">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🚀 由 Claude Code 驱动</div>
+            <h1 class="hero-title">
+                <span class="gradient-text">你好，我是</span><br>
+                <span class="gradient-text-accent">AI 创造者</span>
+            </h1>
+            <p class="hero-subtitle">
+                我使用人工智能构建下一代数字体验。<br>
+                这个网站由 <strong>Claude Code</strong> 全程生成并部署上线。
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">探索项目</a>
+                <a href="#contact" class="btn btn-secondary">联系我</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">个项目</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="30">0</span>
+                    <span class="stat-label">项技术</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">% 热爱</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>向下滚动</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About 区域 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于<span class="gradient-text-accent">我</span></h2>
+            <p class="section-desc">技术 + 创意 = 无限可能</p>
+            <div class="about-grid">
+                <div class="about-card" data-delay="0">
+                    <div class="about-icon">🎨</div>
+                    <h3>创意设计</h3>
+                    <p>将美学与功能完美结合，创造出令人惊叹的用户界面和体验。</p>
+                </div>
+                <div class="about-card" data-delay="100">
+                    <div class="about-icon">⚡</div>
+                    <h3>高效开发</h3>
+                    <p>利用 AI 辅助编程，以传统开发数倍的速度交付高质量代码。</p>
+                </div>
+                <div class="about-card" data-delay="200">
+                    <div class="about-icon">🌐</div>
+                    <h3>全栈能力</h3>
+                    <p>从前端到后端，从设计到部署，无死角覆盖现代 Web 开发全流程。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目区域 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">精选<span class="gradient-text-accent">项目</span></h2>
+            <p class="section-desc">用 AI 赋能每一个像素</p>
+            <div class="projects-grid">
+                <div class="project-card" data-delay="0">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                            <span>🤖</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI 对话平台</h3>
+                        <p>基于大语言模型的智能对话系统，支持多轮对话和上下文理解。</p>
+                        <div class="project-tags">
+                            <span>React</span><span>Node.js</span><span>AI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <span>📊</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>数据可视化仪表盘</h3>
+                        <p>实时数据监控与分析仪表盘，支持多种图表类型和交互式过滤。</p>
+                        <div class="project-tags">
+                            <span>D3.js</span><span>Vue</span><span>WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <span>🛒</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>电商平台重构</h3>
+                        <p>千万级流量电商平台的前端架构重构，性能提升 300%。</p>
+                        <div class="project-tags">
+                            <span>Next.js</span><span>TypeScript</span><span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能区域 -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">技术<span class="gradient-text-accent">栈</span></h2>
+            <p class="section-desc">我使用的工具和技术</p>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3>前端</h3>
+                    <div class="skill-bar" data-percent="95">
+                        <div class="skill-info">
+                            <span>HTML / CSS</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-bar" data-percent="90">
+                        <div class="skill-info">
+                            <span>JavaScript / TypeScript</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-bar" data-percent="88">
+                        <div class="skill-info">
+                            <span>React / Next.js</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill"></div></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>后端 & 工具</h3>
+                    <div class="skill-bar" data-percent="85">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-bar" data-percent="80">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-bar" data-percent="92">
+                        <div class="skill-info">
+                            <span>AI / LLM</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系<span class="gradient-text-accent">我</span></h2>
+            <p class="section-desc">有任何问题或合作意向？欢迎联系！</p>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="你的名字" required>
+                        <span class="form-focus"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="你的邮箱" required>
+                        <span class="form-focus"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="你想说什么..." required></textarea>
+                        <span class="form-focus"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-text">发送消息 🚀</span>
+                        <span class="btn-loading">发送中...</span>
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>邮箱</h4>
+                            <p>hello@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>位置</h4>
+                            <p>中国 · 北京</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div>
+                            <h4>社交媒体</h4>
+                            <p>@ai_creator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 <span class="gradient-text-accent">AI 创造者</span> · 由 Claude Code 生成并部署 · 保留所有权利</p>
+            <div class="footer-links">
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
